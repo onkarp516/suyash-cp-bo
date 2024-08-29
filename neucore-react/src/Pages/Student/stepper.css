@@ -1,0 +1,193 @@
+ul.stepper {
+  overflow-x: hidden;
+  overflow-y: auto;
+  counter-reset: section;
+}
+
+.stepper-horizontal {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+.stepper-horizontal .completed-step a {
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  background-color: transparent;
+  padding-right: 0px;
+  padding-left: 0px;
+  width: 160px;
+}
+.stepper-horizontal .completed-step a .circle {
+  display: inline-block;
+  width: 100px;
+  line-height: 30px;
+  color: #00a045;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.38);
+  border-radius: 27px;
+  background-color: #e6f8ee !important;
+  border: 1px solid;
+  font-weight: 500;
+}
+.stepper-horizontal .completed-step a .label {
+  font-weight: 600;
+  color: #00a045;
+}
+.stepper-horizontal .active-step a {
+  color: #007bff;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  background-color: transparent;
+  padding-right: 0px;
+  padding-left: 0px;
+  width: 160px;
+}
+.stepper-horizontal .active-step a .circle {
+  display: inline-block;
+  width: 100px;
+  line-height: 30px;
+  color: #ffffff;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.38);
+  border-radius: 27px;
+  background-color: #0e70e7 !important;
+  border: 1px solid;
+  font-weight: 500;
+}
+.stepper-horizontal .active-step a .label {
+  font-weight: 600;
+  color: #0e70e7;
+}
+.stepper-horizontal .deactive-step a {
+  color: #007bff;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  background-color: transparent;
+  padding-right: 0px;
+  padding-left: 0px;
+  width: 160px;
+}
+.stepper-horizontal .deactive-step a .circle {
+  display: inline-block;
+  width: 100px;
+  line-height: 30px;
+  color: #7d8893;
+  text-align: center;
+  background: #f5f5f5;
+  border-radius: 27px;
+  border: 1px solid #cfd1d6;
+  font-weight: 500;
+}
+.stepper-horizontal .deactive-step a .label {
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.87);
+}
+
+.stepper-horizontal > li:not(:last-of-type) {
+  margin-bottom: 0 !important;
+}
+
+ul.stepper li {
+  height: -moz-min-content;
+  height: min-content;
+}
+
+.stepper-horizontal li {
+  position: relative;
+  display: flex;
+  flex: 1;
+  align-items: center;
+  transition: 0.5s;
+}
+
+ul.stepper li a .label {
+  display: inline-block;
+  color: rgba(0, 0, 0, 0.38);
+}
+
+ul.stepper li a {
+  padding: 1.5rem;
+  text-align: center;
+}
+@media (min-width: 1025px) and (max-width: 1368px) {
+  ul.stepper li a {
+    padding: 0.2rem;
+  }
+}
+
+.stepper-horizontal li a .label {
+  margin-top: 0.63rem;
+}
+@media (min-width: 1025px) and (max-width: 1368px) {
+  .stepper-horizontal li a .label {
+    font-size: 14px;
+  }
+}
+
+.completed-step:not(:last-child):after {
+  position: relative;
+  flex: 1;
+  height: 2px;
+  margin: -30px 0 0 0;
+  content: "";
+  background-color: green;
+  margin-left: -25px;
+}
+
+.completed-step:not(:first-child)::before {
+  position: relative;
+  flex: 1;
+  height: 2px;
+  margin: -30px 0 0 0;
+  content: "";
+  background-color: green;
+  margin-right: -25px;
+}
+
+.active-step:not(:last-child):after {
+  position: relative;
+  flex: 1;
+  height: 2px;
+  margin: -30px 0 0 0;
+  content: "";
+  background-color: rgba(0, 0, 0, 0.1);
+  margin-left: -25px;
+}
+
+.active-step:not(:first-child):before {
+  position: relative;
+  flex: 1;
+  height: 2px;
+  margin: -30px 0 0 0;
+  content: "";
+  background-color: green;
+  margin-right: -25px;
+}
+
+.deactive-step:not(:last-child):after {
+  position: relative;
+  flex: 1;
+  height: 2px;
+  margin: -30px 0 0 0;
+  content: "";
+  background-color: rgba(0, 0, 0, 0.1);
+  margin-left: -25px;
+}
+
+.deactive-step:not(:first-child):before {
+  position: relative;
+  flex: 1;
+  height: 2px;
+  margin: -30px 0 0 0;
+  content: "";
+  background-color: rgba(0, 0, 0, 0.1);
+  margin-right: -25px;
+}
+
+.danger-color,
+ul.stepper li.warning a .circle {
+  background-color: #ff3547 !important;
+}/*# sourceMappingURL=stepper.css.map */

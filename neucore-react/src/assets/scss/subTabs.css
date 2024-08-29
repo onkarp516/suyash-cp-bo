@@ -1,0 +1,13 @@
+.sub-tab-style {
+  background-color: rgb(255, 255, 255);
+  font-size: 13px;
+  line-height: 10px;
+  position: sticky;
+  top: 76px;
+  overflow: auto;
+  z-index: 999;
+}
+
+.bgtime {
+  background-color: #f6edd3;
+}/*# sourceMappingURL=subTabs.css.map */
